@@ -1,4 +1,5 @@
 # Table of contents
 
 * [Megaptera Frontend](README.md)
-* [WEEK 1](week-1.md)
+* [WEEK 0](week-0/README.md)
+  * [Git Training](week-0/git-training.md)
