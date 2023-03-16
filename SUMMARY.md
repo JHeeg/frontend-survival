@@ -9,4 +9,4 @@
   * [Testing Library](week-1/testingLibrary.md)
   * [Parcel & ESLint](week-1/parcel-eslint.md)
 * [WEEK 2](week-2/README.md)
-  * [JSX]
+  * [JSX](week-2/jsx.md)
