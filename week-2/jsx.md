@@ -111,12 +111,10 @@ Fragment
 // )
 ```
 
-- JSX는 React에 있는 createElement를 사용하도록 코드를 바꿔주는 것
-
 ### React Element
 
 - JSX 대신 React.createElement를 써서 React Element 트리를 갱신하는데 쓸 수 있다.
-- JSX Runtimedms _jsx 함수를, Preact는 h() 함수를 직접 지원한다.
+- JSX Runtime은 _jsx 함수를, Preact는 h() 함수를 직접 지원한다.
 
 - JSX 없이 사용하는 React
 
@@ -129,6 +127,7 @@ Fragment
 
   - <https://beta.reactjs.org/reference/react/createElement>
   - React element를 만들어낸다.
+  - JSX는 React에 있는 createElement를 사용하도록 코드를 바꿔주는 것
 
 ### VDOM(Virtual DOM)
 
