@@ -156,7 +156,7 @@ __시맨틱 URL__
 
 ### 사용 방법
 
-- Fetch 에는 `Request`와 `Response_(en-US)`가 포함되어 있다.
+- Fetch 에는 `Request`와 `Response`가 포함되어 있다.
 - `fetch()`를 불러들이는 경우 취득하고자 하는 리소스를 반드시 인수로 지정해야 한다.
 - `fetch()`는 `Promise` 객체를 반환한다.
 - `fetch()`의 두번째 인수는 초기화에 사용되는 객체를 정의 (생략 가능)
@@ -206,9 +206,80 @@ postData('https://example.com/answer', { answer: 42 }).then((data) => {
 - 이행(fulfilled):연산 성공
 - 거부(rejected): 연산 실패
 
-## ReableStream
+## ReadableStream
+Streams API의 `ReadableStream`인터페이스는 byte 데이터를 읽을 수 있는 스트림을 제공한다. Fetch API는 Response 객체의 body 속성을 통하여 ReadableStream의 구체적인 인스턴스를 제공한다.
+
+### Constructor
+ReadableStream() : 읽을 수 있는 스트림 객체를 생성 후 리턴
+```javascript
+new ReadableStream()
+new ReadableStream(underlyingSource)
+new ReadableStream(underlyingSource, queuingStrategy)
+```
+### Properties
+ReadableStream.locked : `locked는 ReadableStream이 reader에 고정되어 있는지 확인하는 getter 이다.
+```javascript
+const stream = new ReadableStream({
+  // ...
+})
+
+const reader = stream.getReader();
+
+stream.locked;
+```
+
+###  Method
+
+- cancel()
+- getReader()
+- pipeThrough()
+- pipeTo()
+- tee()
 
 ## Unicode
+- 문자 인코딩의 표준
+- 16진수로 표기
+- 조합형은 크기가 너무 커져서 완성형으로 주로 사용한다.
+
+### 인코딩
+용량이 큰 유니코드를 보완하기 위해 가변길이 문자 인코딩으로, 자주 쓰이는 문자 테이블을 1바이트(UTF-8) 또는 2바이트(UTF-16)으로 표현할 수 있는 대신 자주 쓰이지 않는 문자 테이블을 표현하는데 더 많은 바이트가 필요해 진다. `UTF-8`은 흔히 웹 브라우저의 인코딩을 설정할 때 자주 접할 수 있다.
+
+### 텍스트 디코더와 텍스트 인코더
+
+#### 디코더 : 이진 데이터를 자바스크립트 문자열로 읽을 수 있게 변환
+
+```javascript
+let decoder = new TextDecoder([label], [options]);
+```
+
+- label : 기본적인 인코딩 방식은 `utf-8`
+- options
+  - fatal : `true`의 경우 디코딩이 불가능한 글자를 대상으로 예외처리. `false(기본값)`의 경우 글자를 **\uFFFD**로 대체
+  - ingnoreBOM : `true`인 경우 사용되지 않는 바이트 순서 표식을 무시
+
+```javascript
+let str = decoder.decode([input], [options]);
+```
+- input : 디코딩할 BufferSource를 입력
+- options
+  - stream : 많은 양의 데이터를 `decoder`를 반복적으로 호출/실행. 이 경우 멀티 바이트 문자가 분할될 수 있기 때문에 이를 방지하기 위해 TextDecoder에 "unfinished" 문자를 입력시켜 다음 데이터가 오면 디코딩하도록 지시한다.
+
+#### 인코더 : 문자열을 바이트로 변환
+
+```javascript
+let encoder = new TextEncoder();
+```
+
+- 인코딩 시 'uff-8'만 지원
+- encode(str) : `Unit8Array`(BufferSource)에 문자열을 반환
+- encodeInto(str, destination) : Unit8Array 구조 형태로 문자열을 인코딩
+
+```javascript
+let encoder = new TextEncoder();
+
+let uint8Array = encoder.encode("Hello");
+alert(uint8Array); // 72,101,108,108,111
+```
 
 ## CORS란?
 
