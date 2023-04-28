@@ -9,8 +9,8 @@
 
 ### 기본 세가지 원칙
 
-1. 동일한 데이터는 스토어라는 하나의 공간에서 가져온다.
-2. action 이라는 객체를 통해 상태를 변경할 수 있다.
+1. 동일한 데이터는 <mark style="background-color:orange;">Store</mark>라는 하나의 공간에서 가져온다.
+2. <mark style="background-color:orange;">Action</mark> 이라는 객체를 통해 상태를 변경할 수 있다.
 3. 순수 함수로만 변경이 가능하다.
 
 #### ✔️ Store (스토어)
