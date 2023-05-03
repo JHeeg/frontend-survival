@@ -1,13 +1,14 @@
-# 1. 개발 환경 세팅 ⚙️
+# 1. 개발 환경 세팅
 
 ## Node.js 기반으로 한 JavaScript 개발 환경 세팅
 
-<br />
+\
 
-- [Node.js](https://nodejs.org/ko/) 설치
-  - 무조건 최신 버전을 사용하지 않아도 된다. (LTS 사용)
-  - 최신버전 확인 `node -v`
-  - fnm(Fast Node Manager)을 이용해서 Node.js 설치하면 관리하기 쉽고 nvm보다 빠르다.
+
+* [Node.js](https://nodejs.org/ko/) 설치
+  * 무조건 최신 버전을 사용하지 않아도 된다. (LTS 사용)
+  * 최신버전 확인 `node -v`
+  * fnm(Fast Node Manager)을 이용해서 Node.js 설치하면 관리하기 쉽고 nvm보다 빠르다.
 
 ```Bash
 # Homebrew로 fnm 설치
@@ -19,11 +20,14 @@ fnm use lts-lastet
 fnm default $(fnm current)
 ```
 
-<br /><br />
+\
+\
+
 
 ## TypeScript + React + Jest + Parcel 개발 환경 세팅
 
-<br />
+\
+
 
 ### 1. 작업폴더 준비
 
@@ -42,18 +46,18 @@ npm init -y
 ```
 
 ### 3. `.gitignore` 파일작성해서 불필요한 파일까지 commit 하는 일을 방지할 수 있다
-  
-- [github/gitignore](https://github.com/github/gitignore)에서 기본으로 제공하는 것 사
-- [gitignore.io](https://www.toptal.com/developers/gitignore) 에서 생성해주는 템플릿 사용
-- 직접 필요한 것만 추가해서 사용
 
-~~~Bash
+* [github/gitignore](https://github.com/github/gitignore)에서 기본으로 제공하는 것 사
+* [gitignore.io](https://www.toptal.com/developers/gitignore) 에서 생성해주는 템플릿 사용
+* 직접 필요한 것만 추가해서 사용
+
+```Bash
 touch .gitignore
 
 # vi .gitignore
 # node_modules/
 # dist
-~~~
+```
 
 ### 4. typescript 설정, typescript 컴파일러
 
@@ -62,8 +66,8 @@ npm i -D typescript
 npx tsc --init
 ```
 
-- 프로그램에서 실제로 사용할 것은 dependencies
-- 도구로서 설치되는 것은 devDependencies (-D) 배포할 때 도구는 배포에서 제외시켜서 파일의 크기를 줄일 수 있다.
+* 프로그램에서 실제로 사용할 것은 dependencies
+* 도구로서 설치되는 것은 devDependencies (-D) 배포할 때 도구는 배포에서 제외시켜서 파일의 크기를 줄일 수 있다.
 
 ### 4-1 `tsconfig.js` 파일의 jsx 속성 변경
 
@@ -76,8 +80,8 @@ npm i -D eslint
 npx eslint --init
 ```
 
-- `.gitignore`와 같이 `.eslintignore` 도 똑같이 작성
-- `.eslintrc.js`도 필요에 맞게 수정 `jest: true` 미리 설정
+* `.gitignore`와 같이 `.eslintignore` 도 똑같이 작성
+* `.eslintrc.js`도 필요에 맞게 수정 `jest: true` 미리 설정
 
 ### 6. 리액트 설치
 
@@ -129,8 +133,8 @@ module.exports = {
 
 ### 8. parcel 설치
 
-- 웹 애플리케이션 번들러
-- 웹서버를 띄울 수 있다.
+* 웹 애플리케이션 번들러
+* 웹서버를 띄울 수 있다.
 
 ```Bash
 npm i -D parcel
@@ -151,4 +155,4 @@ npm i -D parcel
   },
 ```
 
-- source : 웹 서버를 실행했을 때 열릴 파일, node는 `"main": "index.js"` 로 초기 세팅되어 있다.
+* source : 웹 서버를 실행했을 때 열릴 파일, node는 `"main": "index.js"` 로 초기 세팅되어 있다.
