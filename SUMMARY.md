@@ -33,3 +33,4 @@
 * [WEEK 7](megaptera-frontend/week-7/README.md)
   * [1. Routing](megaptera-frontend/week-7/1.-routing.md)
   * [2. React Router](megaptera-frontend/week-7/2.-react-router.md)
+  * [3. Navigation](megaptera-frontend/week-7/3.-navigation.md)
