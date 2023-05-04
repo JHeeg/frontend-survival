@@ -32,4 +32,4 @@
   * [4. usestore-ts](megaptera-frontend/week-6/4.-usestore-ts.md)
 * [WEEK 7](megaptera-frontend/week-7/README.md)
   * [1. Routing](megaptera-frontend/week-7/1.-routing.md)
-  * [2. Routes](megaptera-frontend/week-7/2.-routes.md)
+  * [2. React Router](megaptera-frontend/week-7/2.-react-router.md)
