@@ -34,3 +34,5 @@
   * [1. Routing](megaptera-frontend/week-7/1.-routing.md)
   * [2. React Router](megaptera-frontend/week-7/2.-react-router.md)
   * [3. Navigation](megaptera-frontend/week-7/3.-navigation.md)
+* [WEEK 8](megaptera-frontend/week-8/README.md)
+  * [1. Design System](megaptera-frontend/week-8/1.-design-system.md)
