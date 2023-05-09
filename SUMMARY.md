@@ -36,3 +36,4 @@
   * [3. Navigation](megaptera-frontend/week-7/3.-navigation.md)
 * [WEEK 8](megaptera-frontend/week-8/README.md)
   * [1. Design System](megaptera-frontend/week-8/1.-design-system.md)
+  * [2. Style Basics](megaptera-frontend/week-8/2.-style-basics.md)
