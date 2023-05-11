@@ -38,3 +38,4 @@
   * [1. Design System](megaptera-frontend/week-8/1.-design-system.md)
   * [2. Style Basics](megaptera-frontend/week-8/2.-style-basics.md)
   * [3. CSS in JS](megaptera-frontend/week-8/3.-css-in-js.md)
+  * [4. styled-components](megaptera-frontend/week-8/4.-styled-components.md)
